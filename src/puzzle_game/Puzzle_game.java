@@ -7,6 +7,8 @@ package puzzle_game;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.util.ArrayList;
+import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -44,11 +46,32 @@ public class Puzzle_game extends JFrame{
           buttons[i].addActionListener(this);
           jPanel.add(buttons[i]);
         }
-          
-      }
+        jPanel.add(jLabel);
+        add(jPanel1);
+        pack();
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(500,500);
+        setLocation(350,100);
+        setVisible(true);
+        
+        }
+      public void mix(){
+        ArrayList<Integer>randomArray=new ArrayList<>();
+        int random;
+        Random rand= new Random();
+        for(int i=0;i<15;i++){
+            do{
+            random=rand.nextInt(15);
+                }
+            while(randomArray.contains(random));
+            System.out.println(random);
+            randomArray.add(random);
+            jPanel.add(buttons[random]);
+            }
     
    
     public static void main(String[] args) {
+        new Puzzle_game();
         
     }
 
