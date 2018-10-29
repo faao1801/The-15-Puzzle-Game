@@ -21,6 +21,11 @@ public class Puzzle_game extends JFrame{
       JButton buttons[]= new JButton[15];
       JLabel jLabel=new JLabel();
       JButton newGame=new JButton("New Game");
+      //creating constructor
+      Puzzle_game(){
+          
+          
+      }
     
    
     public static void main(String[] args) {
