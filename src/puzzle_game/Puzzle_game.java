@@ -44,6 +44,13 @@ public class Puzzle_game extends JFrame{
           buttons[i].addActionListener(this);
           jPanel.add(buttons[i]);
         }
+        jPanel.add(jLabel);
+        add(jPanel1);
+        pack();
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(500,500);
+        setLocation(350,100);
+        setVisible(true);
           
       }
     
