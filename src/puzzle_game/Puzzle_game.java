@@ -14,10 +14,10 @@ import javax.swing.JPanel;
  * @author Farouk A
  */
 public class Puzzle_game extends JFrame{
-
+      //creating the two panels to hold the buttons
       JPanel jPanel = new JPanel();
       JPanel jPanel1= new JPanel();
-
+   
       JButton buttons[]= new JButton[15];
       JLabel jLabel=new JLabel();
       JButton newGame=new JButton("New Game");
