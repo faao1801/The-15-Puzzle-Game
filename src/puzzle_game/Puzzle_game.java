@@ -7,6 +7,8 @@ package puzzle_game;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.JButton;
@@ -18,7 +20,7 @@ import javax.swing.JPanel;
  * 
  * @author Farouk A
  */
-public class Puzzle_game extends JFrame{
+public class Puzzle_game extends JFrame implements ActionListener{
       //creating the two panels to hold the buttons
       JPanel jPanel = new JPanel();
       JPanel jPanel1= new JPanel();
@@ -94,6 +96,11 @@ public class Puzzle_game extends JFrame{
    
     public static void main(String[] args) {
         new Puzzle_game();
+        
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
         
     }
 
