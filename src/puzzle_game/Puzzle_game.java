@@ -55,6 +55,9 @@ public class Puzzle_game extends JFrame{
         setVisible(true);
         
         }
+      /**
+       * a method to mix randomly the 15 buttons and re-add them to Jpanel
+       */
       public void mix(){
         ArrayList<Integer>randomArray=new ArrayList<>();
         int random;
@@ -68,7 +71,26 @@ public class Puzzle_game extends JFrame{
             randomArray.add(random);
             jPanel.add(buttons[random]);
             }
-    
+      }
+      /**
+       * a method to check if the buttons are sorted in the right order
+       * @return true or false
+       */
+      public Boolean gameCompleted(){
+        for(int i=0;i<15;i++){
+            //parsing the name of the button to int
+            int n =Integer.parseInt(jPanel.getComponent(i).getName().trim());
+            System.out.println("number of comp: "+jPanel.getComponent(i).getName());
+            //checking if the difference between n and i (the component index) is equal to one or not
+            if((n-i)!=1)
+               return false;
+
+
+            }
+            return true;
+
+      }
+
    
     public static void main(String[] args) {
         new Puzzle_game();
