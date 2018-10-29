@@ -6,6 +6,7 @@
 package puzzle_game;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -113,7 +114,7 @@ public class Puzzle_game extends JFrame implements ActionListener{
         
         //when "new Game" is clicked, the buttons are mixed randomly
         if(ae.getActionCommand().equals("New Game")){
-        
+        jPanel.setBackground(null);
         jPanel.revalidate();
         mix();
         jPanel.add(jLabel);
@@ -121,11 +122,15 @@ public class Puzzle_game extends JFrame implements ActionListener{
         //if a button is clicked next to an empty box 
         else if(ae.getActionCommand().equals("ok")&&(dif==4||dif==-4||dif==1||dif==-1)){
             jPanel.revalidate();
+            //the clicked button and the empty box change places
             jPanel.add((Component) ae.getSource(),labelNb);
             jPanel.add(jLabel,compNb);
             //if the buttons are beeing sorted in the right order, checked by the method 
             if(gameCompleted()){
                 
+                jPanel.setBackground(Color.green);
+                
+                jPanel.repaint();
                 JOptionPane.showMessageDialog(null,"Congratulations you finished the game!!!");
             }
                 
