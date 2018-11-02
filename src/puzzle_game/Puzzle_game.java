@@ -100,9 +100,7 @@ public class Puzzle_game extends JFrame implements ActionListener{
             return true;
       }
       
-   public static void main(String[] args) {
-        new Puzzle_game();
-   }
+   
 
     @Override
     public void actionPerformed(ActionEvent ae) {
@@ -134,5 +132,7 @@ public class Puzzle_game extends JFrame implements ActionListener{
                 
         }
     }
-
+    public static void main(String[] args) {
+        new Puzzle_game();
+   }
 }
