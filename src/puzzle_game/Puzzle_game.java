@@ -76,10 +76,11 @@ public class Puzzle_game extends JFrame implements ActionListener{
         Random rand= new Random();
         for(int i=0;i<15;i++){
             do{
-            random=rand.nextInt(15);
+              random=rand.nextInt(15);
                 }
+            //if the random number existing, contonue to generate a new random number
             while(randomArray.contains(random));
-         
+            
             randomArray.add(random);
             jPanel.add(buttons[random]);
             }
@@ -92,7 +93,6 @@ public class Puzzle_game extends JFrame implements ActionListener{
         for(int i=0;i<15;i++){
             //parsing the name of the button to int
             int n =Integer.parseInt(jPanel.getComponent(i).getName().trim());
-            
             //checking if the difference between n and i (the component index) is equal to one or not
             if((n-i)!=1)
                return false;
@@ -115,9 +115,9 @@ public class Puzzle_game extends JFrame implements ActionListener{
         //when "new Game" is clicked, the buttons are mixed randomly
         if(ae.getActionCommand().equals("New Game")){
         
-        jPanel.revalidate();
-        mix();
-        jPanel.add(jLabel);
+            jPanel.revalidate();
+            mix();
+            jPanel.add(jLabel);
         }
         //if a button is clicked next to an empty box 
         else if(ae.getActionCommand().equals("ok")&&(dif==4||dif==-4||dif==1||dif==-1)){
